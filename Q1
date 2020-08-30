@@ -1,0 +1,19 @@
+My updated Google Sheets document can be seen here: [Shopify Data](https://docs.google.com/spreadsheets/d/10dI7JRee3kYhBC5rzm1PmgDwfQpSHy7HFJf0HYijVCI/edit?usp=sharing)
+
+a. When looking at this data there are several orders that are outliers from the rest of the data.  
+There is a massive amount of money being spent on these orders compared to the rest.  
+Most orders are in between $300-600 while there are some orders above $500,000.  This highly skewes the AOV value.
+
+b.One option would be to delete the outliers but I would rather not do that.  
+Instead I would take into account the number of items being ordered per order as well.  
+So instead of AOV, I would calculate the average order value per item (AOVPI).  
+By taking into account the number of items the customer bought this will level the playing field for all kinds of orders no matter how much or little is spent.
+
+I created a new column in the table called average_cost_item as seen in link above
+Average_cost_item = (order_amount/total_items)
+
+Then took the average of the entire average_cost_item column to get a single value as seen in link above.
+AOVPI = AVERAGE(average_cost_item)
+
+c. $387.74.  This aligns more with the overall data set.  
+Some of the values in AOVPI are still high but the amount of data doesn’t skew the overall value that much.
